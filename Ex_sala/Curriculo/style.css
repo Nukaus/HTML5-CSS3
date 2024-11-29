@@ -1,0 +1,44 @@
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    color: white;
+    background-color: #202022;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px black;
+}
+body{
+    background-image: linear-gradient(to left, #00747C,#CACACA, #00BBC9);
+}
+h1{
+    text-shadow: 2px 2px 2px #878787;
+    color: #202022;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+}
+main{
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    padding: 1em;
+    border-radius: 5px;
+    border: 0.1em black solid;
+}
+section{
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.subtitulos{
+    font: italic bolder 1em 'Times New Roman';
+}
+.data{
+    font-style: italic;
+}

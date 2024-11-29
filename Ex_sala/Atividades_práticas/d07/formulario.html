@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <style>
+        input{
+            border: 2px black solid;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CADASTRO DE DEVEDORES</h1>
+    </header>
+    <main>
+        <form action="formulario.html" method="post"a>
+            <label for="nome">Nome:</label>
+            <input type="text"><br><br>
+            <label for="senha">Senha:</label>
+            <input type="password" maxlength="8"><br><br>
+            <label for="data">Data de Nascimento:</label>
+            <input type="date"><br><br>
+            <label for="divida">Valor da Divida:</label>
+            <input type="number" step="0.01"><br><br>
+            <select>
+                <option>Contagem</option>
+                <option>Belo Horizonte</option>
+                <option>Betim</option>    
+            </select><br><br>
+            <label for="Sexo">Gênero:</label><br><br>
+            <label for="Masculino">Masculino</label>
+            <input type="radio" name="sexo">
+            <label for="Feminino">Feminino</label>
+            <input type="radio" name="sexo"><br><br>
+            <label for="selecao">Habilidades:</label><br><br>
+            <label for="primeira">Corrida</label>
+            <input type="checkbox" name="" id=""><br><br>
+            <label for="segunda">Natação</label>
+            <input type="checkbox" name="" id=""><br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+    
+    
+</body>
+</html>

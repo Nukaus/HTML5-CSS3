@@ -1,0 +1,21 @@
+div, p{
+    box-sizing: border-box;
+}
+div{
+    background: green;
+    width: 200px;
+    height: 50px;
+    padding: 40px;
+    /*border: 20px solid blue;
+    margin: 30px;*/
+    box-shadow: 2px 2px 2px black;
+}
+p{
+    background: yellow;
+    width: 200px;
+    height: 30px;
+    padding: 0 50px;
+    /*border: 10px solid yellowgreen;
+    margin: 30px;*/
+    box-shadow: 2px 2px 2px black;
+}

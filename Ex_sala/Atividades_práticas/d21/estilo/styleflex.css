@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font: italic bold 1em Arial, Helvetica, sans-serif;
+}
+.padrao{
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.377);
+}
+main{
+    background-color: palevioletred;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.conteiner-esquerdo{
+    width: 100%;
+}
+.row{
+    display: flex;
+    width: 100%;
+    height: 450px;
+}
+nav{
+    background-color: rgb(22, 0, 22);
+    padding: 10px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.377);
+}
+nav > h2{
+    margin: 0;
+}
+header{
+    background-color: rgb(53, 0, 53);
+    padding: 10px;
+    width: 96%;
+    height: 100px;
+}
+header > h2{
+    margin: 0;
+}
+section#um{
+    background-color: rgb(82, 0, 82);
+    padding: 10px;
+    width: 50%;
+}
+section#um > h2{
+    margin: 0;
+}
+section#dois{
+    background-color: rgb(105, 0, 105);
+    padding: 10px;
+    width: 50%;
+    
+}
+section#dois > h2{
+    margin: 0;
+}
+aside{
+    background-color: rgb(138, 0, 138);
+    padding: 10px;
+    width: 20%;
+    height: 550px;
+}
+aside > h2{
+    margin: 0;
+    
+}
+footer{
+    background-color: rgba(177, 0, 177, 0.863);
+    padding: 10px;
+}
+footer > h2{
+    margin: 0;
+}

@@ -1,0 +1,21 @@
+
+form{
+    background-color: blue;
+    border: 1px solid black;
+    margin: 200px 500px;
+    padding: 30px;
+    width: 250px;
+    box-shadow: 2px 2px 2px black;
+    
+}
+label, input, textarea{
+    display: block;
+    width: 100%;
+    
+    margin-bottom: 5px;
+    max-width: 300px;
+    font: bolder 16px 'Times new Roman';
+}
+.enviar{
+    width: 30%;
+}
