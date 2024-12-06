@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Faculty+Glyphic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Faculty+Glyphic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-padrao: Arial, Helvetica, sans-serif;
+    --font-passion: "Passion One", sans-serif;
+    --font-sriracha: "Sriracha", cursive;
+}
+header{
+    padding: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+header h1{
+    font-family: var(--font-passion);
+    font-size: 9vw;
+}
+body{
+    height: 100vh;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    
+}
+main p{
+    display: inline-block;
+    padding: 10px;
+    font-family: var(--font-sriracha);
+    font-size: 3.5vw;
+    margin: 70px 30px;
+}
+main .versos{
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.486);
+
+    
+}
+#imagem01{
+    background: black url(imagens/background001.jpg) right center no-repeat fixed;
+    background-size: cover;
+    
+}
+#imagem02{
+    background: black url(imagens/background002.jpg) right center no-repeat fixed;
+    background-size: cover;
+    
+}
+#imagem01 p, #imagem02 p{
+    background-color: rgba(0, 0, 0, 0.438);
+    color: white;
+    
+}
+footer{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: var(--font-padrao);
+}
