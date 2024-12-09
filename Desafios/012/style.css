@@ -30,7 +30,6 @@ main{
     
 }
 main p{
-    display: inline-block;
     padding: 10px;
     font-family: var(--font-sriracha);
     font-size: 3.5vw;
@@ -54,6 +53,7 @@ main .versos{
 #imagem01 p, #imagem02 p{
     background-color: rgba(0, 0, 0, 0.438);
     color: white;
+    display: inline-block;
     
 }
 footer{
