@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor0:#00DB77;
+    --cor1:#00AEDB;
+    --cor2:#00DBC2;
+    --cor3:#00DB2D;
+    --cor4:#0069DB;
+    --cor5:#49DBCA;
+    
+
+}
+body{
+    background-color: lightblue;
+}
+header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    padding: 10px;
+    text-align: start;
+    color: white;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.418);
+}
+nav{
+   margin-left: 600px;
+   
+}
+nav > a{
+    margin: 20px;
+}
+.destaque_inicial{
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+    background: black url(imagens/metaverse.jpg) top center no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    padding: 10px;  
+    justify-content: center;
+    text-align: center;
+}
+#s1{
+    width: 100px;
+    align-self: center;
+    padding: 2px;
+    margin: 5px;
+    
+
+}
+.tipos_software{
+    display: flex;
+    background-image: linear-gradient(to right, var(--cor3), var(--cor5));
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+#produto{
+    background-image: url(imagens/6106299.jpg);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    padding: 10px;  
+}
+#servico{
+    background-image: url(imagens/4261612.jpg);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    padding: 10px;  
+}
+#plataforma{
+    background-image: url(imagens/6503739.jpg);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    padding: 10px;  
+}
+#produto, #servico, #plataforma{
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.418);
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 4px;
+    text-align: center;
+}
