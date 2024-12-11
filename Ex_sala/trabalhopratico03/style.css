@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Faculty+Glyphic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Faculty+Glyphic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sriracha&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -10,11 +12,50 @@
     --cor3:#00DB2D;
     --cor4:#0069DB;
     --cor5:#49DBCA;
-    
+
+    --font-titulos: "Poppins", sans-serif;
+    --font-destaque: "Roboto", sans-serif;
 
 }
 body{
     background-color: lightblue;
+    line-height: 30px;
+    font-family: var(--font-destaque);
+}
+#body_servico{
+    background: black url(imagens/4261612.jpg) top center no-repeat fixed;
+    background-size: cover;
+    
+}
+#body_produto{
+    background: black url(imagens/6106299.jpg) top center no-repeat fixed;
+    background-size: cover;
+}
+#body_plataforma{
+    background: black url(imagens/6503739.jpg) top center no-repeat fixed;
+    background-size: cover;
+}
+#main_servico, #main_produto, #main_plataforma{
+    width: 800px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.418);
+}
+#main_servico, #main_produto > p{
+    text-indent: 30px;
+}
+#main_servico, #main_produto > h2{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-family: var(--font-titulos);
+}
+#main_servico, #main_produto > h1{
+    font-family: var(--font-titulos);
 }
 header{
     display: flex;
@@ -43,10 +84,11 @@ nav > a{
     background: black url(imagens/metaverse.jpg) top center no-repeat fixed;
     background-size: cover;
     width: 100%;
-    height: 50vh;
+    height: 45vh;
     padding: 10px;  
     justify-content: center;
     text-align: center;
+    color: white;
 }
 #s1{
     width: 100px;
@@ -64,28 +106,62 @@ nav > a{
     
 }
 #produto{
+    display: grid;
     background-image: url(imagens/6106299.jpg);
     width: 300px;
     height: 300px;
     background-size: cover;
     padding: 10px;  
+    text-align: justify;
+}
+#p1{
+    align-self: end;
+    justify-self: end;
+    width: 100px;
+    
+    
 }
 #servico{
+    display: grid;
     background-image: url(imagens/4261612.jpg);
     width: 300px;
     height: 300px;
     background-size: cover;
-    padding: 10px;  
+    padding: 10px; 
+    text-align: justify; 
+}
+#p2{
+    align-self: end;
+    justify-self: end;
+    width: 100px;
 }
 #plataforma{
+    display: grid;
     background-image: url(imagens/6503739.jpg);
     width: 300px;
     height: 300px;
     background-size: cover;
     padding: 10px;  
+    text-align: justify;
+}
+#p3{
+    align-self: end;
+    justify-self: end;
+    width: 100px;
 }
 #produto, #servico, #plataforma{
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.418);
+}
+.sobre{
+    background: black url(imagens/2356914.jpg) center center no-repeat fixed;
+    background-size: cover;
+    height: 50vh; 
+    padding: 10px;  
+}
+.sobre1{
+    width: 800px;
+    margin: auto;
+    text-align: justify;
 }
 footer{
     background-color: black;
