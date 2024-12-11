@@ -17,11 +17,7 @@
     --font-destaque: "Roboto", sans-serif;
 
 }
-body{
-    background-color: lightblue;
-    line-height: 30px;
-    font-family: var(--font-destaque);
-}
+/*OUTRAS PÁGINAS*/
 #body_servico{
     background: black url(imagens/4261612.jpg) top center no-repeat fixed;
     background-size: cover;
@@ -35,7 +31,15 @@ body{
     background: black url(imagens/6503739.jpg) top center no-repeat fixed;
     background-size: cover;
 }
-#main_servico, #main_produto, #main_plataforma{
+#body_nuvem{
+    background: black url(imagens/nuvem.jpg) top center no-repeat fixed;
+    background-size: cover;
+}
+#body_nic{
+    background: black url(imagens/nic.jpg) top center no-repeat fixed;
+    background-size: cover;
+}
+#main_servico, #main_produto, #main_plataforma, #main_nuvem, #main_nic{
     width: 800px;
     margin-top: 0;
     margin-bottom: 10px;
@@ -46,16 +50,34 @@ body{
     background-color: white;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.418);
 }
-#main_servico, #main_produto > p{
+#main_servico, #main_produto, #main_plataforma, #main_nuvem, #main_nic > p{
     text-indent: 30px;
 }
-#main_servico, #main_produto > h2{
+#main_servico, #main_produto, #main_plataforma, #main_nuvem, #main_nic > h2{
     margin-top: 0px;
     margin-bottom: 10px;
     font-family: var(--font-titulos);
 }
-#main_servico, #main_produto > h1{
+#main_servico, #main_produto, #main_plataforma, #main_nuvem, #main_nic > h1{
     font-family: var(--font-titulos);
+}
+#main_servico, #main_produto, #main_plataforma, #main_nuvem, #main_nic > ol, ul{
+    padding: 20px;
+}
+
+/*PÁGINA PRINCIPAL*/
+body{
+    background-color: lightblue;
+    line-height: 30px;
+    font-family: var(--font-destaque);
+}
+.titulo{
+    font-family: var(--font-titulos);
+    font-weight: bold;
+    
+}
+.destaque_inicial, .sobre1 > .titulo{
+    text-shadow: 2px 2px 2px black;
 }
 header{
     display: flex;
@@ -76,12 +98,23 @@ nav{
 }
 nav > a{
     margin: 20px;
+    color: var(--cor2);
+    font-weight: bold;
+    text-decoration: none;
+}
+nav > a:hover{
+    background-color: var(--cor1);
+    color: var(--cor3);
+    text-decoration: underline;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s ;
 }
 .destaque_inicial{
     display: flex;
     flex-direction: column;
     margin-top: 56px;
-    background: black url(imagens/metaverse.jpg) top center no-repeat fixed;
+    background: black url(imagens/metaverse700.jpg) top center no-repeat fixed;
     background-size: cover;
     width: 100%;
     height: 45vh;
@@ -100,63 +133,82 @@ nav > a{
 }
 .tipos_software{
     display: flex;
+    flex-wrap: wrap;
     background-image: linear-gradient(to right, var(--cor3), var(--cor5));
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 20px;
     
 }
 #produto{
     display: grid;
-    background-image: url(imagens/6106299.jpg);
+    background-image: url(imagens/6106299500.jpg);
     width: 300px;
     height: 300px;
     background-size: cover;
     padding: 10px;  
     text-align: justify;
+    border-radius: 10px;
 }
-#p1{
-    align-self: end;
-    justify-self: end;
-    width: 100px;
-    
-    
-}
+
 #servico{
     display: grid;
-    background-image: url(imagens/4261612.jpg);
+    background-image: url(imagens/4261612500.jpg);
     width: 300px;
     height: 300px;
     background-size: cover;
     padding: 10px; 
     text-align: justify; 
+    border-radius: 10px;
 }
-#p2{
-    align-self: end;
-    justify-self: end;
-    width: 100px;
-}
+
 #plataforma{
     display: grid;
-    background-image: url(imagens/6503739.jpg);
+    background-image: url(imagens/6503739500.jpg);
     width: 300px;
     height: 300px;
     background-size: cover;
     padding: 10px;  
     text-align: justify;
+    border-radius: 10px;
 }
-#p3{
+#nuvem{
+    display: grid;
+    background-image: url(imagens/nuvem500.jpg);
+    color: white;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    padding: 10px;  
+    text-align: justify;
+    border-radius: 10px;
+}
+#nic{
+    display: grid;
+    background-image: url(imagens/nic500.jpg);
+    max-width: 1000px;
+    height: 150px;
+    margin-top: 20px;
+    background-size: cover;
+    padding: 10px;  
+    text-align: justify;
+    border-radius: 10px;
+}
+#p1, #p2, #p3{
     align-self: end;
     justify-self: end;
     width: 100px;
 }
+
 #produto, #servico, #plataforma{
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.418);
 }
 .sobre{
     background: black url(imagens/2356914.jpg) center center no-repeat fixed;
     background-size: cover;
-    height: 50vh; 
+    color: white;
+    height: 60vh; 
     padding: 10px;  
+
 }
 .sobre1{
     width: 800px;
