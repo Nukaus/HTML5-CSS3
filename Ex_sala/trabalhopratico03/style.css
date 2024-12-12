@@ -80,6 +80,7 @@ body{
     text-shadow: 2px 2px 2px black;
 }
 header{
+    width: 100%;
     display: flex;
     align-items: center;
     position: fixed;
@@ -187,31 +188,68 @@ nav > a:hover{
     background-image: url(imagens/nic500.jpg);
     max-width: 1000px;
     height: 150px;
-    margin-top: 20px;
     background-size: cover;
     padding: 10px;  
     text-align: justify;
     border-radius: 10px;
 }
-#p1, #p2, #p3{
+#p1, #p2, #p3, #p4, #p5{
     align-self: end;
     justify-self: end;
-    width: 100px;
+    color: var(--cor4);
+    text-decoration: none;
+    
 }
 
-#produto, #servico, #plataforma{
+#produto, #servico, #plataforma, #nuvem, #nic{
+    margin-top: 20px;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.418);
+}
+#produto > a:hover{
+    background-color: var(--cor1);
+    text-decoration: underline;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s ;
+}
+#servico > a:hover{
+    background-color: var(--cor1);
+    text-decoration: underline;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s ;
+}
+#plataforma > a:hover{
+    background-color: var(--cor1);
+    text-decoration: underline;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s ;
+}
+#nuvem > a:hover{
+    background-color: var(--cor1);
+    text-decoration: underline;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s ;
+}
+#nic > a:hover{
+    background-color: var(--cor1);
+    text-decoration: underline;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s ;
 }
 .sobre{
     background: black url(imagens/2356914.jpg) center center no-repeat fixed;
     background-size: cover;
     color: white;
-    height: 60vh; 
+    max-height: 100%; 
     padding: 10px;  
 
 }
 .sobre1{
-    width: 800px;
+    max-width: 800px;
     margin: auto;
     text-align: justify;
 }
