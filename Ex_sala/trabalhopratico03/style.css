@@ -140,9 +140,7 @@ nav > a:hover{
     background-color: white;
     text-shadow: none;
     border-radius: 5px;
-}
-#s1 > a:hover{
-    padding: 5px;
+    font-weight: bold;
 }
 .tipos_software{
     display: flex;
@@ -256,19 +254,22 @@ nav > a:hover{
 .sobre{
     background: black url(imagens/2356914.jpg) center center no-repeat fixed;
     background-size: cover;
-    color: white;
+    color: black;
     max-height: 100%; 
     padding: 10px;  
 
 }
 .sobre1{
-    max-width: 800px;
+    max-width: 1024px;
     margin: auto;
     text-align: justify;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.432);
+    background-color: white;
     border-radius: 10px;
     
+}
+.sobre1 > .titulo{
+    color: var(--cor3);
 }
 footer{
     background-color: black;
@@ -279,7 +280,7 @@ footer{
 /*RESPONSIVIDADE CELULARES*/
 @media (max-width: 768px){
     nav{
-        margin-left: 40px;
+        margin-left: 80px;
         margin-top: 5px;
         margin-bottom: 5px;
     }
