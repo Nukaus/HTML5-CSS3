@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Faculty+Glyphic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-passion: "Passion One", sans-serif;
+}
+body{
+    background-image: url(imagens/OQ3OWB0.jpg);
+    background: black url(imagens/OQ3OWB0.jpg) center center no-repeat fixed;
+    background-size: cover;
+    font-family: var(--font-passion);
+}
+header{
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+h2{
+    margin-top: 10px;
+}
+main{
+    position: relative;
+    height: 87vh;
+}
+section{
+    position: absolute;
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -125%);
+}
+.numero{
+    text-align: center;
+}
+div{
+    margin: 10px;
+}
+button, input{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
