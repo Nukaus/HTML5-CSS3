@@ -11,7 +11,6 @@
     --font-sriracha: "Sriracha", cursive;
 }
 header{
-    padding: 30px;
     background-color: black;
     color: white;
     text-align: center;
@@ -20,6 +19,19 @@ header{
 header h1{
     font-family: var(--font-passion);
     font-size: 9vw;
+    padding-top: 50px;
+    font-variant: small-caps;
+}
+header p{
+    padding-bottom: 50px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+a:hover{
+    text-decoration: underline;
 }
 body{
     height: 100vh;
