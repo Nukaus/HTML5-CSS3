@@ -1,0 +1,53 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+header{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+header h1{
+    font-variant: small-caps;
+}
+main{
+    position: relative;
+    height: 100vh;
+    background-color: lightgray;
+}
+section{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -100%);
+
+    width: 400px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+label, input, button{
+    padding: 5px;
+    margin: 5px;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
