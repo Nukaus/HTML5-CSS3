@@ -6,6 +6,6 @@ function check(){
         document.getElementById("maior").innerText = `O maior número é: ${check1}`;
     }
     else {
-        document.getElementById("maior").innerText = `O maior número é: ${check2}`
+        document.getElementById("mensagem").innerText = `O maior número é: ${check2}`;
     }
 }
