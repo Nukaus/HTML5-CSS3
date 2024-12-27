@@ -1,9 +1,13 @@
 function check(){
-    const vota = parseFloat(document.getElementById("number").value);
+    const nota = parseFloat(document.getElementById("number").value);
     let mensagemElement = document.getElementById("mensage");
-    if (vota >= 18){
-        mensagemElement.innerText = "Você já pode votar!!";
+    if (nota >= 8 ){
+        mensagemElement.innerText = `Nota A`;
+    }else if ( nota >= 6){
+        mensagemElement.innerText = `Nota B`;
+    }else if ( nota == 5){
+        mensagemElement.innerText = `Nota C`;
     }else{
-        mensagemElement.innerText = "Você ainda não pode votar!!";
+        mensagemElement.innerText = `Nota D`;
     }
 }

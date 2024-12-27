@@ -1,9 +1,11 @@
 function check(){
-    const number = parseFloat(document.getElementById("num1").value);
+    const num = parseFloat(document.getElementById("number").value);
     let mensagemElement = document.getElementById("mensage");
-    if (number % 2 == 0){
-        mensagemElement.innerText = "O número digitado é Par";
+    if (num == 0){
+        mensagemElement.innerText = "O número é 0.";
+    }else if (num > 0){
+        mensagemElement.innerText = "O número é positivo.";
     }else{
-        mensagemElement.innerText = "O número digitado é Ímpar";
+        mensagemElement.innerText = "O número é negativo.";
     }
 }
