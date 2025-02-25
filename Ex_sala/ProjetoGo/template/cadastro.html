@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <main>
+        <section id="titulo">
+            <h1>CADASTRO DE DOADORES</h1>
+        </section>
+        <section id="formulario">
+            <form method="post" action="scadastro">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" placeholder="Digite seu nome completo">
+                <label for="tel">Telefone:</label>
+                <input type="text" name="tel" placeholder="Telefone: (Ex: (31) 99999-9999)">
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" placeholder="Endereço de E-mail">
+                <label for="nome">Tipo Sanguineo:</label>
+                <select name="tiposanguineo" id="">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+                <div class="botoes">
+                    <button type="submit">Salvar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </form>
+        </section>
+        <div class="voltar">
+            <button><a href="/inicial">Voltar</a></button>
+        </div>
+    </main>
+</body>
+</html>
