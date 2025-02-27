@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
-	"projeto/database"
+	"projeto/service"
 )
 
 func abreIndex(resposta http.ResponseWriter, requisicao *http.Request){
@@ -47,14 +47,11 @@ func salvadoador(resposta http.ResponseWriter, requisicao *http.Request){
 
 	if requisicao.Method == http.MethodPost{
 		nomeDoador := requisicao.FormValue("nome")
-		fmt.Println("O nome do usuario é", nomeDoador)
-		nomeTel := requisicao.FormValue("tel")
-		fmt.Println("O telefone do usuario é", nomeTel)
-		nomeEmail := requisicao.FormValue("email")
-		fmt.Println("O email do usuario é", nomeEmail)
-		nomeTsan := requisicao.FormValue("tiposanguineo")
-		fmt.Println("O Tipo Sanguineo do usuario é", nomeTsan)
-		database.ConectaBanco()
+		telefoneDoador := requisicao.FormValue("tel")
+		emailDoador := requisicao.FormValue("email")
+		tipoDoador := requisicao.FormValue("tiposanguineo")
+			
+		service.InsereDoador(nomeDoador, telefoneDoador, emailDoador, tipoDoador)
 	}
 	pagina.Execute(resposta, nil)
 }

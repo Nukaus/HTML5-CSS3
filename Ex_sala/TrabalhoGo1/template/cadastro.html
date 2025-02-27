@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <main>
+        <section id="titulo">
+            <h1>CADASTRO DE CLIENTES</h1>
+        </section>
+        <section id="formulario">
+            <form method="post" action="scadastro">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" placeholder="Digite seu nome completo">
+                <label for="tel">Telefone:</label>
+                <input type="text" name="tel" placeholder="Telefone: (Ex: (31) 99999-9999)">
+                <label for="renda">Renda:</label>
+                <input type="text" name="renda" placeholder="Sua renda">
+                <label for="data">Data de nascimento:</label>
+                <input type="date" name="dia">
+                <label for="CEP">CEP:</label>
+                <input type="text" name="cep" placeholder="00000-000">
+                <div class="botoes">
+                    <button type="submit">Salvar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

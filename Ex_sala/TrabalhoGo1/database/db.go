@@ -7,7 +7,7 @@ import("database/sql"
 func ConectaBanco() *sql.DB{
 
 	//config. da conexão 
-	conexao := "root:1346@tcp(127.0.0.1:3306)/db_hospital"
+	conexao := "root:1346@tcp(127.0.0.1:3306)/db_infousers"
 
 	//abrir conexão - informe o driver e a string de conexão
 	db, err := sql.Open("mysql", conexao)
@@ -20,6 +20,8 @@ func ConectaBanco() *sql.DB{
 
 	if err != nil {
 		fmt.Print("Erro ao buscar o servidor", err)
+	}else{
+		fmt.Print("Conectado com sucesso")
 	}
 	return db
 }
