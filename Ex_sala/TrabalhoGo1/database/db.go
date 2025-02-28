@@ -6,10 +6,8 @@ import("database/sql"
 
 func ConectaBanco() *sql.DB{
 
-	//config. da conexão 
 	conexao := "root:1346@tcp(127.0.0.1:3306)/db_infousers"
 
-	//abrir conexão - informe o driver e a string de conexão
 	db, err := sql.Open("mysql", conexao)
 	
 	if err != nil{

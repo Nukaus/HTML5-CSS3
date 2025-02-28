@@ -1,0 +1,21 @@
+@app.route('/adicionar', methods=['POST'])
+def adicionar_usuario():
+    if request.method == 'POST':
+        nome = request.form['nome']
+        tel = request.form['tel']
+        renda = request.form['renda']
+        dia = request.form['dia']
+        cep = request.form['cep']
+
+        conexao = conectar_banco()
+        cursor = conexao.cursor()
+
+        sql = "INSERT INTO usuarios (nome, tel, renda, dia, cep) VALUES (%s, %s, %s, %s, %s)"
+        valores = (nome, tel, renda, dia, cep)
+        cursor.execute(sql, valores)
+
+        conexao.commit()
+        cursor.close()
+        conexao.close()
+
+        return redirect('/')

@@ -40,17 +40,12 @@ func salvadoador(resposta http.ResponseWriter, requisicao *http.Request){
 }
 
 func main(){
-	// Servindo arquivos estáticos
+
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	
-	//Criando um EndPoint
-	// http.HandleFunc("/inicial", abreIndex)
 	http.HandleFunc("/cadastro", abreCadastro)
-	// http.HandleFunc("/login", abreLogin)
 	http.HandleFunc("/scadastro", salvadoador)
-	// http.HandleFunc("/fazerlogin", fazlogin)
 
-	//Subindo Servidor
 	erro := http.ListenAndServe("0.0.0.0:8080", nil)
 	if erro != nil{
 		fmt.Print("Servidor com Problemas.")
