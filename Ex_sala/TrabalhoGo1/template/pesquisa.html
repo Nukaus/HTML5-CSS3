@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Pesquisa de Usuário</title>
+</head>
+<body>
+    <header>
+        <h1>CADASTRO DE CLIENTES</h1>
+        <nav>
+            <a href="cadastro">Cadastro</a>
+            <a href="#">Buscar</a>
+            <a href="detalhes">Detalhes</a>
+        </nav>
+    </header>
+    <main>
+        <section id="pesquisa">
+            
+            <h1>Pesquisa de Usuário por ID</h1>
+            <form action="/pesquisar" method="GET">
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" placeholder="Digite o ID" required />
+                <button type="submit">Pesquisar</button>
+            </form>
+            <div id="erro">
+                {{if .Erro}}
+                    <p class="error">{{.Erro}}</p>
+                {{end}}
+            </div>
+            <div>
+                <h2>Resultado:</h2>
+                {{if .Usuario.Id}}
+                    <p><strong>ID:</strong> {{.Usuario.Id}}</p>
+                    <p><strong>Nome:</strong> {{.Usuario.Nome}}</p>
+                    <p><strong>Telefone:</strong> {{.Usuario.Telefone}}</p>
+                    <p><strong>Renda:</strong> R$ {{.Usuario.Renda}}</p>
+                    <p><strong>Data de Nascimento:</strong> {{.Usuario.Dia}}</p>
+                    <p><strong>CEP:</strong> {{.Usuario.Cep}}</p>
+                {{else}}
+                    <p>Nenhum usuário encontrado.</p>
+                {{end}}
+            </div>
+        </section>
+    </main>
+</body>
+</html>

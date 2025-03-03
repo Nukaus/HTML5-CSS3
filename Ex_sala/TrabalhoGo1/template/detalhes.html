@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Lista de Usuários</title>
+</head>
+<body>
+    <header>
+        <h1>CADASTRO DE CLIENTES</h1>
+        <nav>
+            <a href="cadastro">Cadastro</a>
+            <a href="pesquisa">Buscar</a>
+            <a href="#">Detalhes</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Lista de Usuários</h2>
+        <section id="tabela">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Renda</th>
+                    <th>Data de Nasc.</th>
+                    <th>CEP</th>
+                </tr>
+                {{range .}}
+                <tr>
+                    <td>{{.Id}}</td>
+                    <td>{{.Nome}}</td>
+                    <td>{{.Telefone}}</td>
+                    <td>{{.Renda}}</td>
+                    <td>{{.Dia}}</td>
+                    <td>{{.Cep}}</td>
+                </tr>
+                {{end}}
+            </table>
+        </section>
+    </main>
+</body>
+</html>
