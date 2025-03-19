@@ -9,7 +9,6 @@ import (
 	"log"
 )
 
-
 func abreCadastro(resposta http.ResponseWriter, requisicao *http.Request){
 	pagina, erro:=template.ParseFiles("template/cadastro.html")
 
@@ -79,6 +78,7 @@ func pesquisarUsuario(resposta http.ResponseWriter, requisicao *http.Request) {
 	}
 	// Extrair os dados do formulário
 	idStr := requisicao.URL.Query().Get("id")
+	nomeStr := requisicao.URL.Query().Get("nome")
 
 	// Criar um objeto vazio de usuário
 	dados := struct {
@@ -91,7 +91,7 @@ func pesquisarUsuario(resposta http.ResponseWriter, requisicao *http.Request) {
         if convErr != nil {
             dados.Erro = "ID inválido. Insira um número válido."
         } else {
-            usuario, err := service.BuscaUsuarios(id) // Chama a função corrigida
+            usuario, err := service.BuscaUsuariosid(id) // Chama a função corrigida
             if err != nil {
                 dados.Erro = "Erro ao buscar usuário. Tente novamente."
                 log.Println("Erro ao buscar usuário:", err)
@@ -103,9 +103,20 @@ func pesquisarUsuario(resposta http.ResponseWriter, requisicao *http.Request) {
         }
     }
 
+	if nomeStr != "" {
+		usuario, err := service.BuscaUsuariosnome(nomeStr) // Chama a função corrigida
+		if err != nil {
+			dados.Erro = "Erro ao buscar usuário. Tente novamente."
+			log.Println("Erro ao buscar usuário:", err)
+		}else {
+			dados.Usuario = usuario
+		}
+	}
+	
     // Renderizar a página com os dados e erro (se houver)
     pagina.Execute(resposta, dados)
 }
+
 func main(){
 
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))

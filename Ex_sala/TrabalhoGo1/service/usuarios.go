@@ -29,7 +29,7 @@ type Usuario struct {
 	Cep      string
 }
 
-func BuscaUsuarios(id int) (Usuario, error){
+func BuscaUsuariosid(id int) (Usuario, error){
 	conexao := database.ConectaBanco()
 	defer conexao.Close()
 
@@ -38,6 +38,25 @@ func BuscaUsuarios(id int) (Usuario, error){
 	var usuario Usuario
 	// Usando QueryRow para buscar um único usuário
 	err := conexao.QueryRow(selectComando, id).Scan(&usuario.Id, &usuario.Nome, &usuario.Telefone, &usuario.Renda, &usuario.Dia, &usuario.Cep)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			log.Println("Usuário não encontrado")
+			return Usuario{}, err
+		}
+	}
+	return usuario, nil
+}
+
+func BuscaUsuariosnome(nome string) (Usuario, error){
+	conexao := database.ConectaBanco()
+	defer conexao.Close()
+
+	selectComando := "SELECT id_cliente, nome_cliente, telefone_cliente, renda_cliente, nasc_cliente, cep_cliente  FROM usuario WHERE nome_cliente LIKE ?"
+
+	var usuario Usuario
+	// Usando QueryRow para buscar um único usuário
+	nomeBusca := "%" + nome + "%"
+	err := conexao.QueryRow(selectComando, nomeBusca).Scan(&usuario.Id, &usuario.Nome, &usuario.Telefone, &usuario.Renda, &usuario.Dia, &usuario.Cep)
 	if err != nil {
 		if err == sql.ErrNoRows {
 			log.Println("Usuário não encontrado")
