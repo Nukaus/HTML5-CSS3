@@ -1,0 +1,142 @@
+﻿/* Asterisco = seletor universal, representa todos 
+os elementos serão afetados */
+
+
+* {
+	
+/* 
+margin: valor1 - as quatro margens terão valor1.
+margin: valor1 valor2 - margem superior e inferior terão valor1 - margem direita e esquerda terão valor2
+margin: valor1 valor2 valor3 - margem superior terá valor1 - margem direita e esquerda terão valor2 - margem inferior terá valor3.
+margin: valor1 valor2 valor3 valor4 - margens superior, direita, inferior e esquerda nesta ordem.
+	
+	
+	
+*/	
+    
+	margin: 3px 4px 2px 3px;
+	
+
+}
+
+
+body{
+
+/*Define a cor de fundo para o corpo da página*/
+
+  background: #F8EFBA;
+  
+ 
+
+
+}
+
+#banner	 {
+
+  width:100%; /*Largura*/
+  height:"auto"; /*Altura*/
+  margin-bottom: 30px; /* Define / Adiciona uma margem inferior de 30 pixels ao elemento "banner".
+  coloca valor mais longe de outros elementos visinhos, enquanto um valor negativo, aproxima.
+  */
+  border-radius: 12px; /*Definir bordas arredondadas*/
+	
+    }
+
+
+ h1 {
+        background: green; /* Define a cor de fundo para os cabeçalhos h1 */
+        text-align: center; /* Centraliza o texto dentro do cabeçalho h1 */
+        color: #ffffff; /* Define a cor do texto dentro do cabeçalho h1 como branco */
+        width:100% /*Lagura total*/
+		
+ }
+ 
+ 
+ 
+/*   
+p {
+
+    
+     font-family: Courier;
+     color: red;
+     font-size: 22px;
+ }
+
+*/
+
+
+/*Abaixo formatação texto da página index*/
+
+
+#bem_vindo{
+     font-family: Courier;
+	 color: green;
+     font-size: 22px;
+	 
+ } 
+
+/* Define o estilo para os elementos com o ID "nota", ID frequencia e ID conselho*/
+#nota, #frequencia, #conselho {
+  font-family: Courier;	
+  font-size: 17px; /* Define o tamanho da fonte como 20 pixels para o elemento "nota" */
+  color: red; /*cor do texto em vermelho*/
+   
+}		   
+	
+ 
+ /*Abaixo códigos para estilação dos menus / submenus */
+ 
+/* Estilos para o menu principal */
+.menu {
+  background-color: black; /* Define a cor de fundo preta */
+  display: flex; /* Organiza os itens em linha */
+  font-family: Arial; /* Define a fonte */
+  font-size: 20px; /* Define o tamanho da fonte */
+  list-style: none; /* Remove os marcadores de lista */
+  padding: 0; /* 0 (Zero) remove o espaçamento interno padrão */
+  width: 100%; /* Ocupa a largura total do contêiner */
+}
+
+/* Estilos para os itens do menu principal */
+.menu > li {  /*.menu > li seleciona todos os elementos <li> que são filhos diretos de um elemento que possui a classe "menu".*/
+  position: relative; /* Permite posicionar o submenu corretamente em relação a este item */
+  margin-right: 20px; /* Espaçamento entre os itens do menu*/
+}
+
+/* Estilos para os links do menu principal */
+.menu a {
+  color: white; /* Define a cor do texto branco do menu principal */
+  padding: 10px; /* Espaçamento interno */
+  text-decoration: none; /* Remove sublinhado do texto*/
+  display: block; /* Faz com que o link ocupe a largura total do item do menu*/
+}
+
+/* Estilos para o submenu */
+.submenu {
+  display: none; /* Oculto / esconde por padrão os submenus */
+  position: absolute; /* Posicionado em relação ao item pai de forma absoluta */
+  background-color: black; /* Cor de fundo preta dos submenus*/
+  width: 200px; /* Define largura fixa dos submenus*/
+  padding: 10px; /* Espaçamento interno dos submenus*/
+  list-style: none; /* Remove marcadores de lista */
+  top: 90%; /* Posiciona o submenu abaixo do item do menu principal */
+  left: 0; /* Alinha o submenu com o lado esquerdo do item do menu principal */
+  z-index: 2; /* Sobrepõe outros elementos, Elementos com um valor de z-index maior serão exibidos sobre elementos com um valor menor,
+  ou seja, o elemento com o maior z-index ficará "na frente" dos outros. */
+}
+
+/* Exibe o submenu ao passar o mouse no item pai (menu principal) é haveado*/
+.menu > li:hover > .submenu {
+  display: block; /* Exibe o submenu ao passar o mouse no item do menu principal */
+}
+
+/* Estilos para os links do submenu */
+.submenu a {
+  color: white; /* Define cor do texto branco dos submenus */
+}
+
+/* Estilos para os links ao passar o mouse */
+.menu a:hover,
+.submenu a:hover {
+  background-color: rgb(24, 139, 233); /* Cor de fundo azul ao passar o mouse */
+}

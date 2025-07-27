@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang = "pt-br">
+
+
+
+<!--https://www.w3schools.com/   site referência
+
+https://pt.stackoverflow.com/questions/280758/mascara-no-form-somente-em-html-e-css
+
+--> 
+
+      <head>
+	  
+
+	           <meta name="author" content="Wanderley Lopes Batista">    
+               <meta charset="UTF-8">
+			   <meta name="viewport" content="width=device-width, initial-scale=1"> 
+	          
+			  <title>Cadastro de Professor</title>
+			  
+             <link rel="stylesheet" type="text/css" href="css/estilo.css">	
+
+             <SCRIPT type="text/javascript" src="js/codigo.js">		
+
+             </SCRIPT>			 
+			  
+	  </head>
+	   
+	  
+
+<body>
+<h1>CADASTRO DE PROFESSOR</h1><br/>
+<hr>
+<p>Preencher dados do professor(a):</p>
+
+<br>
+
+<fieldset><legend>CADASTRO DE PROFESSOR(A)</legend><br>
+
+
+
+<form name="formprofessores" method="post" onsubmit="return testa_form();" action="#">
+
+<!-- &nbsp; "Non-breaking space" - Espaço sem quebra -->
+
+<label for="cpf">CPF:</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* <input type="text" id="cpf" name="cpf" placeholder="###.###.###-##" autocomplete="off"  data-mask="cpf" oninput="mascara(this)"> <br>
+(sem espaços, pontos ou traços) <br><br>
+
+<label for="professor">NOME DO PROFESSOR:</label>
+* <input type="text" id="professor" name="professor" style="width: 310px;"> <br><br>
+
+<label for="data">DATA DE NASCIMENTO:</label>
+&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" id="data" name="data"> <br><br>
+
+SEXO: <input type="radio" name="sexo" value="masculino">Masculino
+      <input type="radio" name="sexo" value="feminino">Feminino <br><br>
+
+<label for="endereco">ENDEREÇO:</label>
+<input type="text" id="endereco" name="endereco"> <br><br> 
+
+<label for="complemento">COMPLEMENTO:</label>
+<input type="text" id="complemento" name="complemento"> <br><br>
+
+<label for="cep">CEP:</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="cep" name="cep" placeholder="#####-###" autocomplete="off" data-mask="cep" oninput="mascara(this)"> <br><br>
+
+<label for="bairro">BAIRRO:</label>
+<input type="text" id="bairro" name="bairro"  style="width: 327px;"> <br><br>
+
+<label for="cidade">CIDADE:</label>
+<input type="text" id="cidade" name="cidade"> <br><br>
+
+<label for="estado">ESTADO:</label>
+<select name="estado" id="select">
+
+<option value="">SELECIONE O ESTADO:</option>
+<option value="ac">Acre</option>
+<option value="al">Alagoas</option>
+<option value="ap">Amapá</option>
+<option value="am">Amazonas</option>
+<option value="ba">Bahia</option>
+<option value="ce">Ceará</option>
+<option value="df">Distrito Federal</option>
+<option value="es">Espírito Santo</option>
+<option value="go">Goiás</option>
+<option value="ma">Maranhão</option>
+<option value="ms">Mato Grosso do Sul</option>
+<option value="mt">Mato Grosso</option>
+<option value="mg">Minas Gerais</option>
+<option value="pa">Pará</option>
+<option value="pb">Paraíba</option>
+<option value="pr">Paraná</option>
+<option value="pe">Pernambuco</option>
+<option value="pi">Piauí</option>
+<option value="rj">Rio de Janeiro</option>
+<option value="rn">Rio Grande do Norte</option>
+<option value="rs">Rio Grande do Sul</option>
+<option value="ro">Rondônia</option>
+<option value="rr">Roraima</option>
+<option value="sc">Santa Catarina</option>
+<option value="ac">Acre</option>
+<option value="sp">São Paulo</option>
+<option value="se">Sergipe</option>
+<option value="to">Tocantins</option>
+</select>
+<br><br>
+
+<!-- style - Estilo inline -->
+
+<label for="celular">CELULAR:</label>
+<input type="text" id="telefone" name="telefone" placeholder="(##)#####-####" autocomplete="off" style="width: 150px;" data-mask="cel" oninput="mascara(this)"> <br>
+
+ <br>
+ 
+ <label for="formacao">FORMAÇÃO:</label>
+<input type="text" id="formacao" name="formacao" style="width: 300px;" > <br><br> 
+ 
+ <label for="titulacao">TITULAÇÃO:</label>
+<select name="titulacao" id="select">
+
+<option value="">SELECIONE A TITULAÇÃO:</option>
+<option value="graduacao">Graduação</option>
+<option value="mestrado">Mestrado</option>
+<option value="doutorado">Doutorado</option>
+</select>
+<br><br>
+ 
+
+<button><a href="index.html">RETORNAR</a></button>
+&nbsp;&nbsp;&nbsp;<input type="reset" value="LIMPAR" name="limpar">
+&nbsp;&nbsp;&nbsp;<input type="submit" value="ENVIAR" name="Enviar" />
+
+
+</form>
+
+</fieldset>
+
+
+<footer>
+<br>
+  <center><p><a href="mailto:wanderleylb@gmail.com">Author: Wanderley Lopes Batista</a> - WLB Qualidade & Desenvolvimento LTDA - Todos os direitos reservados </p></center>
+</footer>  
+
+</body>
+
+
+</html>
