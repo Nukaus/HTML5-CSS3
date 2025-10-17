@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form method="get" autocomplete="on">
+        <fieldset>
+            <!-- Para funções de radio tem que ter o mesmo nome.
+            Podemos colocar uma opção padrão -->
+            <legend>Gênero</legend>
+            <input type="radio" name="sx" id="isxmas" value="Masculino">
+            <label for="isxmas">Masculino</label> <br>
+            <input type="radio" name="sx" id="isxfem" value="Feminino" checked>
+            <label for="isxfem">Feminino</label>
+        </fieldset>
+
+        <fieldset>
+            <!-- Podemos colocar várias opções padrão -->
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="esfot" id="iesfut" checked> <label for="iesfut">Futebol</label> <br>
+            <input type="checkbox" name="esfbas" id="iesbas"> <label for="iesbas">Basquete</label> <br>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> <br>
+            <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Ténis</label>
+        </fieldset>
+
+        <p>
+            <input type="submit">
+            <input type="reset">
+        </p>
+    </form>
+</body>
+</html>
