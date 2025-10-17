@@ -8,7 +8,22 @@
 <body>
     <h1>Exemplo de formulário</h1>
     <form method="get" autocomplete="on">
-        
+        <p>
+            <label for="icor">Cor</label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+        </p>
+
+        <p>
+            <label for="inivel">Nível de satisfação</label>
+            <input type="range" name="nivel" id="inivel" min="1" max="5" value="2">
+        </p>
+
+        <p>
+            <!-- Quando utilizar, não podemos usar o method GET, apenas o method POST (Sempre que o arquivo passar de 3mil bites)-->
+            <label for="ifoto">Foto de perfil</label>
+            <input type="file" name="foto" id="ifoto">
+        </p>
+
         <p>
             <input type="submit">
             <input type="reset">
